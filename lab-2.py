@@ -10,6 +10,15 @@ def isprime(x):
     return True
     
 
+def test_isprime():
+    assert isprime(0) == False
+    assert isprime(2) == True
+    assert isprime(997) == True
+
+
+test_isprime()
+
+
 def get_largest_prime_below(n):
     """
     Găsește ultimul număr prim mai mic decât un număr dat
@@ -18,6 +27,16 @@ def get_largest_prime_below(n):
     """
     for i in range(n-1, 1, -1):
         if isprime(i): return i
+    return None
+
+
+def test_get_largest_prime_below():
+    assert get_largest_prime_below(2) == None
+    assert get_largest_prime_below(15) == 13
+    assert get_largest_prime_below(149) == 139
+
+
+test_get_largest_prime_below()
 
 
 def is_palindrome(n) -> bool:
@@ -30,6 +49,15 @@ def is_palindrome(n) -> bool:
     oglindit_n = 0
     while copie_n > 0:
         oglindit_n = 10 * oglindit_n + copie_n % 10
-        copie_n /= 10
+        copie_n = copie_n // 10
     if n == oglindit_n: return True
     return False
+
+
+def test_is_palindrome():
+    assert is_palindrome(0) == True
+    assert is_palindrome(6498946) == True
+    assert is_palindrome(481579) == False
+
+
+test_is_palindrome()
