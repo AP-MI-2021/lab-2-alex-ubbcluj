@@ -25,7 +25,7 @@ def get_largest_prime_below(n):
     param. n - numarul dat
     return - ultimul număr prim mai mic decât n
     """
-    for i in range(n-1, 1, -1):
+    for i in range(n-1, 0, -1):
         if isprime(i): return i
     return None
 
@@ -61,3 +61,31 @@ def test_is_palindrome():
 
 
 test_is_palindrome()
+
+
+def input_get_largest_prime_below():
+    x = int(input("Introduceti numarul "))
+    print(get_largest_prime_below(x))
+
+
+def input_is_palindrome():
+    x = int(input("Introduceti numarul "))
+    print(is_palindrome(x))
+
+
+def main():
+    while True:
+        print("""
+        Alegeti functia:
+        1) get_largest_prime_below
+        2) is_palindrome
+        3) stop program
+        """)
+        option = int(input("Optiune: "))
+        if option == 1: input_get_largest_prime_below()
+        elif option == 2: input_is_palindrome()
+        elif option == 3: break
+        else: print("Optiune invalida")
+
+
+main()
