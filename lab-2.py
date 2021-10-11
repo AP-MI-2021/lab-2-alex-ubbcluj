@@ -63,6 +63,12 @@ def test_is_palindrome():
 test_is_palindrome()
 
 
+
+def input_isprime():
+    x = int(input("Introduceti numarul "))
+    print(isprime(x))
+
+
 def input_get_largest_prime_below():
     x = int(input("Introduceti numarul "))
     print(get_largest_prime_below(x))
@@ -77,14 +83,16 @@ def main():
     while True:
         print("""
         Alegeti functia:
-        1) get_largest_prime_below
-        2) is_palindrome
-        3) stop program
+        1) isprime
+        2) get_largest_prime_below
+        3) is_palindrome
+        4) stop program
         """)
         option = int(input("Optiune: "))
-        if option == 1: input_get_largest_prime_below()
-        elif option == 2: input_is_palindrome()
-        elif option == 3: break
+        if option == 1: input_isprime()
+        elif option == 2: input_get_largest_prime_below()
+        elif option == 3: input_is_palindrome()
+        elif option == 4: break
         else: print("Optiune invalida")
 
 
