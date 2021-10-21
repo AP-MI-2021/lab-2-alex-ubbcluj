@@ -81,13 +81,11 @@ def input_is_palindrome():
 
 def main():
     while True:
-        print("""
-        Alegeti functia:
-        1) isprime
-        2) get_largest_prime_below
-        3) is_palindrome
-        4) stop program
-        """)
+        print("Alegeti functia:")
+        print("1) isprime")
+        print("2) get_largest_prime_below")
+        print("3) is_palindrome")
+        print("4) stop program")
         option = int(input("Optiune: "))
         if option == 1: input_isprime()
         elif option == 2: input_get_largest_prime_below()
